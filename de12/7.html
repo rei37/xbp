@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>第7回課題</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head> <link rel="stylesheet" href="css/style.css">
+<body>
+    <h1>データサイエンス</h1>
+<div>今回私は「家賃」と「乗換時間」を重視して分析しました。</div>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <h2>路線ごとによる分析</h2>
+    <h3>路線ごとによる家賃の差</h3>
+    <img src="images/路線×家賃.png" width="40%">
+    <div>家賃が極端に安い路線もありますね。ですが、目的地がみなとみらい駅であるので、みなとみらい駅から遠くては意味がありません。<br>
+    次に路線ごとによる合計時間の差についてグラフを出します。</div>
+    <h3>路線ごとによる合計時間の差</h3>
+    <img src="images/路線×合計時間.png" width="40%">
+    <div>この２つのグラフから私は東急東横線の駅がみなとみらい駅からの時間も短く家賃も比較的安いのかなと考えました。<br>
+    東急東横線のグラフ中の数値</div>
+    <img src="images/路線×家賃.png" width="40%"> <img src="images/路線×乗換時間数値.png" width="40%">
+　　<h2>東急東横線の駅について分析</h2>
+　　<div>今度は東急東横線の駅で家賃が安く、みなとみらい駅から時間が短い駅を分析していきたいと思います。</div>
+   <h3>東急東横線の駅と家賃についてのグラフ</h3>
+　　<img src="images/東急東横線の駅×家賃.png" width="40%"><diV>※縦軸が抜けていますが「家賃」です。</diV>
+　  <h3>東急東横線の駅と乗換時間についてのグラフ</h3>
+　  <img src="images/東急東横線の乗り換え時間.png" width="40%"><div>※縦軸が抜けていますが「乗換時間」です。</div>
+　　
+　　<h2>分析結果</h2>
+    <div>この二つのグラフから白楽や東白楽の付近のエリアがが家賃も安くみなとみらい駅からも近いと分析しました。<br>
+    また、横浜キャンパスにも近いので、横浜キャンパスでしか行っていない、一人暮らしの方向けの食品や生活用品の支援プロジェクトを受けやすくなるとも考えました。</div>
+    <div>グラフの中の白楽と東白楽の数値(左が家賃平均、右が乗り換え時間平均）</div><img src="images/東急東横線の駅×家賃数値.png" width="30%"><img src="images/東急東横の駅×乗り換え時間数値.png" width="30%">   
+    <h2>ソースコード</h2> 
+         <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">data_path = "./data.csv"</li>
+            <li style="background-color:#EFF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">df_mean = df_data.groupby("路線").mean()</li>
+            <li style="background-color:#EEF;">x = df_mean.index</li>
+            <li style="background-color:#EFF;">y = df_mean.loc[:, "家賃"]</li>
+            <li style="background-color:#EEF;">print(df_mean.loc[:, "家賃"])</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">df_mean = df_data.groupby("路線").mean()</li>
+            <li style="background-color:#EFF;">x = df_mean.index</li>
+            <li style="background-color:#EEF;">y = df_mean.loc[:, "乗換時間"]</li>
+            <li style="background-color:#EFF;">print(df_mean.loc[:, "乗換時間"])</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">print(df_data.groupby(["路線", "駅"]).mean().loc["東急東横線", "家賃"])</li>
+            <li style="background-color:#EEF;">df_data.groupby(["路線", "駅"]).mean().loc["東急東横線", "家賃"].plot.bar()</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">print(df_data.groupby(["路線", "駅"]).mean().loc["東急東横線", "乗換時間"])</li>
+            <li style="background-color:#EFF;">df_data.groupby(["路線", "駅"]).mean().loc["東急東横線", "乗換時間"].plot.bar()</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            </ol></code>
+         <!-- ④↓に外部リンクを作ってみよう -->
+
+</body>
+</html>
