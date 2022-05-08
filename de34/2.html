@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>re37.第2回</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head> <link rel="stylesheet" href="css/style.css">
+<body>
+    <h1>光を操る</h1>
+    <h2>【NeoPixelを使ってLEDの色をランダムに光らせよう】</h2>
+    <div><a href="https://www.google.com/search?q=neopixel&rlz=1C5CHFA_enJP970JP970&sxsrf=AOaemvKl1PxltUUO8lbRtEW80maI3SDYbA:1635814963344&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjFr7vOvfjzAhWVxIsBHS1PA2gQ_AUoAnoECAEQBA&biw=1440&bih=702&dpr=1" target="_blank">neopixelとは</a></div>
+      
+    <h3>コード</h3>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div>
+      <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">#include &lt;Adafruit_NeoPixel.h&gt;</li>
+        <li style="background-color:#EEF;">#define PIN        9 // 信号用のピンを指定</li>
+        <li style="background-color:#EFF;">#define NUMPIXELS 5 // LEDの数を指定</li>
+        <li style="background-color:#EEF;">int brightness=50;//明るさ</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">void setup() {</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;pixels.begin(); // NeoPixel出力ピンの初期化</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.setBrightness(brightness);</li>
+        <li style="background-color:#EFF;">}</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">void loop() {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.clear(); // すべてのLEDの色を0にセット</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;for(int i=0; i&lt;NUMPIXELS; i++) {</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;int r=random(0,255);</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;int g=random(0,255);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;int b=random(0,255);</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(i, pixels.Color(100, 255, 100));</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.show();</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;delay(1000);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;}</li>
+        <li style="background-color:#EEF;">}</li>
+        <li style="background-color:#EFF;"></li>
+        </ol></code>
+        <h3>授業資料</h3>
+        <ul><li><a href="https://qiita.com/doyodoyo/items/1cc581b32f1a4458c5f2" target="_blank">NeoPixelについて</a></li></ul></div>
+
+        
+        <h1>正・負の感情　グループワークまとめ</h1>
+        <div><h2>【正の感情】</h2>
+        <h3>サッカーでゴールを決めたとき</h3>
+      <img src="images/ゴールを決めたとき.jpeg" width="20%"><img src="images/ゴールを決めた過程があるから.jpeg" width="20%"><img src="images/嬉しい=.jpeg" width="20%">
+      <img src="images/貢献できたという気持ち.jpeg" width="20%"><img src="images/自分のことしか考えていない.jpeg" width="20%"><br>
+      考察：サッカーでゴールを決めたときというのは、チームや仲間に貢献できたという気持ちや決めるまでの過程があるからという利他的な要因もあれば、あくまで「自分」が決めたことに対するうれしさというエゴや利己的な要因があると考えた。<br>
+    またこのような考察から自分が責任のある役職（リーダーや責任者、今回はシュートを決める責任）において役割を遂行できた時と似ているのではと考えた。</div>
+      <h3>POV</h3>
+      <img src="images/第2回POV.png" width="40%">
+
+      
+
+
+         <!-- ①↓に文字を書いてみよう -->
+   
+         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
+
+
+
+
+
+
+
+         <!-- ③↓に箇条書きをしてみよう -->
+
+</html>
