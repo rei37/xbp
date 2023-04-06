@@ -117,7 +117,7 @@ a:active, a:focus,input:active, input:focus{outline:0;}
 	width: 100%;
 	-webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-	color: #fff;
+	color: #000000;
 	line-height: 1.2;
 	text-align: center;
 }
@@ -125,12 +125,12 @@ a:active, a:focus,input:active, input:focus{outline:0;}
 #slogan h1{
 	font-size: 40px;
 	font-family: 'Pacifico', cursive;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	font-weight:normal;
 }
 
 #slogan h2{
-	font-size: 20px;
+	font-size: 15px;
 	font-weight:normal;
 }
 
@@ -181,9 +181,9 @@ section h2{
 ------------------------------------------------------------*/
 
 .vision{
-	width: 60%;
-	margin: 0 auto;
-	padding-bottom: 80px;
+	width: 100%;
+	margin: 20% 0 ;
+	padding-bottom: 100px;
 }
 
 
@@ -220,7 +220,7 @@ section h2{
 /* SEC04 STORY & SUCCESS
 ------------------------------------------------------------*/
 #sec04{
-	background: url(../images/bgSec04.jpg) no-repeat 100% 100% fixed;
+	background: url(../images/tyairo.jpeg) no-repeat 100% 100% fixed;
 	background-size: cover;
 	-webkit-background-size: cover;
 	color: #fff;
